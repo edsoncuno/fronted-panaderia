@@ -10,17 +10,17 @@ import { FaInstagramSquare } from 'react-icons/fa';
 const App = () => {
 
     const headerStyle = {
-        'background-color': 'white',
+        'backgroundColor': 'white',
         width: '100%',
-        'z-index': '99',
+        //'z-index': '99',
         //position: 'fixed',
-        top: '0',
+        //top: '0',
         padding: '1rem 0rem',// y x
         display: 'flex',//activar el flex
-        'flex-direction': 'row',//ordenar de los elementos en una fila
-        'justify-content': 'space-around',//dejar espacios equitativos horizontalmente entre los elementos
-        'align-items': 'center',//centrear verticalmente*/
-        'border-bottom': '2px solid grey'
+        'flexDirection': 'row',//ordenar de los elementos en una fila
+        'justifyContent': 'space-around',//dejar espacios equitativos horizontalmente entre los elementos
+        'alignItems': 'center',//centrear verticalmente*/
+        'borderBottom': '2px solid grey'
     }
 
     return (<React.Fragment>

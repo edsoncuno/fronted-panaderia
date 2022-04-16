@@ -1,11 +1,12 @@
 import React from "react";
 
-import Contacto from './components/Contacto'
-import Footer from './components/Footer'
 import Header from './components/Header'
+import Portada from './components/Portada'
 import Nosotros from './components/Nosotros'
 import NuestroChef from './components/NuestroChef'
-import Portada from './components/Portada'
+import NuestroMenu from './components/NuestroMenu/index'
+import Contacto from './components/Contacto'
+import Footer from './components/Footer'
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
         <Portada />
         <Nosotros />
         <NuestroChef />
+        <NuestroMenu />
         <Contacto />
         <Footer />
     </React.Fragment>);
