@@ -41,18 +41,28 @@ const App = () => {
         'transition': 'all .3s ease',
     }
 
-    const clickPostres = () => {
+    const clickPostres = (e) => {
+        cambiarLosStyles(e);
         setMenu('postres');
     }
 
-    const clickCafes = () => {
+    const clickCafes = (e) => {
+        cambiarLosStyles(e);
         setMenu('cafes');
+    }
+
+    const cambiarLosStyles = (e) => {
+        const collection = document.getElementsByClassName("categoria-activado");
+        for(let i = 0; i<collection.length;i++) {
+            collection[i].className = 'categoria';
+        }
+        e.target.className = 'categoria-activado';
     }
 
     return (<div style={mainStyle} id='nuestroMenu'>
         <div style={tituloStyle}>Nuestro menú</div>
         <div style={categoriasStyle}>
-            <div className="categoria" style={linkCategoriaStyle} onClick={clickPostres}>POSTRES</div>
+            <div className="categoria-activado" style={linkCategoriaStyle} onClick={clickPostres}>POSTRES</div>
             <div className="categoria" style={linkCategoriaStyle} onClick={clickCafes}>CAFÉS</div>
         </div>
         {menu === 'postres' ? <Postres /> : <Cafes />}

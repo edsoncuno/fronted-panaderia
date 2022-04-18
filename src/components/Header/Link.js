@@ -10,36 +10,35 @@ const App = (props) => {
         'fontSize': '1.5rem'
     }
 
-    //let movimiento;
+    const velocidad = 10;
+    let movimientoDelScroll;
+    let origen;
+    let destino;
 
     const irSeccion = (e) => {
         e.preventDefault();
-        //console.log(e.target.getAttribute('href'));
-        console.log(document.querySelector(e.target.getAttribute('href')).offsetTop);
-        //console.log(this.getAttribute('href').offsetTop);
-        //const destino = this.getAttribute('href');
-        //console.log(destino)
-        //let temp = document.getElementById('contacto').offsetTop
-        //window.scroll(0,2906);
+        clearInterval(movimientoDelScroll);
+        origen = window.pageYOffset;
+        destino = document.querySelector(e.target.getAttribute('href')).offsetTop;
+        movimientoDelScroll = setInterval(moverScroll, 1);
     }
 
-    /*
-    const moverScroll = (yActual, yDestino) => {
-        if (yActual < yDestino) {
-            yActual += 10;
-            window.scroll(0, yActual);
-            if (yActual >= yDestino) {
-                clearInterval(movimiento);
+    const moverScroll = () => {
+        if (origen < destino) {
+            origen += velocidad;
+            window.scroll(0, origen);
+            if (origen >= destino) {
+                clearInterval(movimientoDelScroll);
             }
         }
         else {
-            yActual -= 10;
-            window.scroll(0, yActual);
-            if (yActual <= yDeLaSeccion) {
-                clearInterval(movimiento);
+            origen -= velocidad;
+            window.scroll(0, origen);
+            if (origen <= destino) {
+                clearInterval(movimientoDelScroll);
             }
         }
-    }*/
+    }
 
     return (<React.Fragment>
         <a href={props.href} style={aStyle} onClick={irSeccion}>

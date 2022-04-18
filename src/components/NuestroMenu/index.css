@@ -1,3 +1,9 @@
+.categoria {
+    color: black;
+}
+.categoria-activado{
+    color: gold;
+}
 .categoria:hover {
     color: gold;
 }
