@@ -1,4 +1,5 @@
 import React from "react";
+import Foto from './../../img/chef-1.jpg'
 
 const App = () => {
 
@@ -24,7 +25,9 @@ const App = () => {
     const parrafo = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, fuga. Blanditiis assumenda odit, sunt voluptatibus molestiae iure, beatae placeat laudantium non explicabo earum nesciunt nostrum adipisci consequatur amet'
 
     const columnaIzquierdaStyle = {
-        background: 'white',
+        background: `url(${Foto})`,
+        'backgroundSize': 'cover',
+        'backgroundPosition': 'center',
         margin: '0rem 3rem',
     }
 

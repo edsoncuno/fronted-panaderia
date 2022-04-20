@@ -11,6 +11,7 @@ import ImagenPortada4 from './../../img/portada4.jpg'
 const App = () => {
 
     const portadaStyle = {
+        'paddingTop':'5rem',
         width: '100%',
         'height': '45rem',
         display: 'grid',

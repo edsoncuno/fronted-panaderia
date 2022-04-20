@@ -8,7 +8,7 @@ const App = () => {
     }
 
     return (<React.Fragment>
-        <a href="#header">
+        <a href="#portada">
             <img src={Logo} alt='logo' style={imgStyle} />
         </a>
     </React.Fragment >)

@@ -12,9 +12,10 @@ const App = () => {
     const headerStyle = {
         'backgroundColor': 'white',
         width: '100%',
-        //'z-index': '99',
-        //position: 'fixed',
-        //top: '0',
+        'zIndex': '99',
+        position: 'fixed',
+        top: '0',
+        'height':'4rem',
         padding: '1rem 0rem',// y x
         display: 'flex',//activar el flex
         'flexDirection': 'row',//ordenar de los elementos en una fila
@@ -27,7 +28,7 @@ const App = () => {
         <header id='#header' style={headerStyle}>
             <Logo />
             <div>
-                <Link text={'Inicio'} href={'#header'} />
+                <Link text={'Inicio'} href={'#portada'} />
                 <Link text={'Nosotros'} href={'#nosotros'} />
                 <Link text={'Nuestro Chef'} href={'#nuestroChef'} />
                 <Link text={'Nuestro Menu'} href={'#nuestroMenu'} />

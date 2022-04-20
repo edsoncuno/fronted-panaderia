@@ -1,0 +1,70 @@
+.inputGroup {
+    width: 90%;
+    height: 10%;
+    position: relative;
+}
+
+.buttonGroup{
+    width: 90%;
+    height: 20%;
+    display: flex;
+}
+
+.inputStyle {
+    font-family: "Comfortaa", cursive;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    margin: 0%;
+    padding: 0%;
+    border: none;
+    background: none;
+    height: 2rem;
+    vertical-align: bottom;
+}
+
+.inputStyle:focus {
+    border-bottom: 2px solid gold;
+}
+
+.labelStyle {
+    color: grey;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transition: all .3s ease;
+}
+
+.labelStyleActive {
+    position: absolute;
+    color: grey;
+    top : -1rem;
+    left: 0rem;
+    font-size: 0.8rem;
+    transition: all .3s ease;
+}
+
+.buttonStyle {
+    font-family: "Comfortaa", cursive;
+    font-size: 16px;
+    background: #daa520;
+    color:white;
+    border-radius: 1px;
+    border: 1px solid white;
+    cursor: pointer;
+    margin: 0.5rem auto;
+    width: 20%;
+    transition: all .3s ease;
+}
+
+.buttonStyle:active {
+    background: grey;
+}
+
+.error {
+    position: absolute;
+    color : red;
+    top : 2.2rem;
+    left: 1rem;
+    transition: all .3s ease;
+}

@@ -19,7 +19,7 @@ const App = (props) => {
         e.preventDefault();
         clearInterval(movimientoDelScroll);
         origen = window.pageYOffset;
-        destino = document.querySelector(e.target.getAttribute('href')).offsetTop;
+        destino = document.querySelector(e.target.getAttribute('href')).offsetTop-5*16;
         movimientoDelScroll = setInterval(moverScroll, 1);
     }
 
